@@ -6,7 +6,7 @@ Essa aplicação será utilizada para armazenar projetos e suas tarefas.
 
 ## Rotas
 
-- `POST /projects`: A rota deve receber `id` e `title` dentro corpo de cadastrar um novo projeto dentro de um array no seguinte formato: `{ id: 1, title: 'Novo projeto', tasks: [] }`;
+- `POST /projects`: A rota deve receber `id` e `title` dentro corpo de cadastrar um novo projeto dentro de um array no seguinte formato: `{ id: "1", title: 'Novo projeto', tasks: [] }`;
 
 - `GET /projects`: Rota que lista todos projetos e suas tarefas;
 
@@ -23,7 +23,7 @@ Se eu chamar a rota `POST /projects` repassando `{ id: 1, title: 'Novo projeto' 
 ```js
 [
   {
-    id: 1,
+    id: "1",
     title: 'Novo projeto',
     tasks: ['Nova tarefa']
   }
