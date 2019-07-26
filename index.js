@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require('express');
 
 const server = express();
 
@@ -22,7 +22,7 @@ function checkProjectExists(req, res, next) {
   const project = projects.find(p => p.id == id);
 
   if (!project) {
-    return res.status(400).json({ error: "Project not found" });
+    return res.status(400).json({ error: 'Project not found' });
   }
 
   return next();
@@ -44,11 +44,11 @@ server.use(logRequests);
 /**
  * Projects
  */
-server.get("/projects", (req, res) => {
+server.get('/projects', (req, res) => {
   return res.json(projects);
 });
 
-server.post("/projects", (req, res) => {
+server.post('/projects', (req, res) => {
   const { id, title } = req.body;
 
   const project = {
@@ -62,7 +62,7 @@ server.post("/projects", (req, res) => {
   return res.json(project);
 });
 
-server.put("/projects/:id", checkProjectExists, (req, res) => {
+server.put('/projects/:id', checkProjectExists, (req, res) => {
   const { id } = req.params;
   const { title } = req.body;
 
@@ -73,7 +73,7 @@ server.put("/projects/:id", checkProjectExists, (req, res) => {
   return res.json(project);
 });
 
-server.delete("/projects/:id", checkProjectExists, (req, res) => {
+server.delete('/projects/:id', checkProjectExists, (req, res) => {
   const { id } = req.params;
 
   const projectIndex = projects.findIndex(p => p.id == id);
@@ -86,7 +86,7 @@ server.delete("/projects/:id", checkProjectExists, (req, res) => {
 /**
  * Tasks
  */
-server.post("/projects/:id/tasks", checkProjectExists, (req, res) => {
+server.post('/projects/:id/tasks', checkProjectExists, (req, res) => {
   const { id } = req.params;
   const { title } = req.body;
 
