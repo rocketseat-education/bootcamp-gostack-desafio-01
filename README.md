@@ -1,29 +1,25 @@
 <h1 align="center">
-    <img alt="Aircnc" title="#delicinha" src="https://i.imgur.com/WfafA3y.png" width="180px" />
+    <img alt="Aircnc" title="#delicinha" src="https://i.imgur.com/WfafA3y.png" width="200px" />
 </h1>
 
 <h3 align="center">
   Desafio 1: Conceitos do NodeJS
 </h3>
 
-<h4 align="center">
-  <blockquote>“Sua única limitação é você mesmo”!</blockquote>
-</h4>
+<blockquote align="center">“Sua única limitação é você mesmo”!</blockquote>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Rocketseat/bootcamp-gostack-desafio-01.svg">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafio-01?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Rocketseat/bootcamp-gostack-desafio-01.svg">
-
-  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-01/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Rocketseat/bootcamp-gostack-desafio-01.svg">
+  <a href="https://rocketseat.com.br">
+    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%2304D361">
   </a>
 
-  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-01/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/Rocketseat/bootcamp-gostack-desafio-01.svg">
-  </a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-01/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafio-01?style=social">
+  </a>
 </p>
 
 <p align="center">
@@ -31,8 +27,6 @@
   <a href="#-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
-
-<br>
 
 ## :rocket: Sobre o desafio
 
