@@ -1,10 +1,44 @@
-# Desafio 01. Conceitos do NodeJS
+<h1 align="center">
+    <img alt="Aircnc" title="#delicinha" src="https://i.imgur.com/WfafA3y.png" width="180px" />
+</h1>
 
-Crie uma aplicação do zero utilizando Express.
+<h3 align="center">
+  Desafio 1: Conceitos do NodeJS
+</h3>
 
-Essa aplicação será utilizada para armazenar projetos e suas tarefas.
+<h4 align="center">
+  <blockquote>“Sua única limitação é você mesmo”!</blockquote>
+</h4>
 
-## Rotas
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Rocketseat/bootcamp-gostack-desafio-01.svg">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Rocketseat/bootcamp-gostack-desafio-01.svg">
+
+  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-01/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Rocketseat/bootcamp-gostack-desafio-01.svg">
+  </a>
+
+  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-01/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/Rocketseat/bootcamp-gostack-desafio-01.svg">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+</p>
+
+<p align="center">
+  <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+
+<br>
+
+## :rocket: Sobre o desafio
+
+Crie uma aplicação para armazenar projetos e suas tarefas do zero utilizando [Express](https://expressjs.com/pt-br/).
+
+### Rotas
 
 - `POST /projects`: A rota deve receber `id` e `title` dentro corpo de cadastrar um novo projeto dentro de um array no seguinte formato: `{ id: "1", title: 'Novo projeto', tasks: [] }`; Certifique-se de enviar tanto o ID quanto o título do projeto no formato string com àspas duplas.
 
@@ -24,22 +58,26 @@ Se eu chamar a rota `POST /projects` repassando `{ id: 1, title: 'Novo projeto' 
 [
   {
     id: "1",
-    title: 'Novo projeto',
-    tasks: ['Nova tarefa']
+    title: "Novo projeto",
+    tasks: ["Nova tarefa"]
   }
-]
+];
 ```
 
-## Middlewares
+### Middlewares
 
 - Crie um middleware que será utilizado em todas rotas que recebem o ID do projeto nos parâmetros da URL que verifica se o projeto com aquele ID existe. Se não existir retorne um erro, caso contrário permita a requisição continuar normalmente;
 
 - Crie um middleware global chamado em todas requisições que imprime (`console.log`) uma contagem de quantas requisições foram feitas na aplicação até então;
 
-## Entrega
+## 📅 Entrega
 
-Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do código do desafio aqui: https://github.com/Rocketseat/bootcamp-gostack-desafio-01
+Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do [código do desafio aqui](https://github.com/Rocketseat/bootcamp-gostack-desafio-01/blob/master/index.js). Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
 
-Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
+## :memo: Licença
 
-“Sua única limitação é você mesmo”!
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+Feito com ♥ by Rocketseat :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
