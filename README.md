@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Aircnc" title="#delicinha" src="https://i.imgur.com/WfafA3y.png" width="200px" />
+    <img alt="GoStack" src="https://i.imgur.com/WfafA3y.png" width="200px" />
 </h1>
 
 <h3 align="center">
