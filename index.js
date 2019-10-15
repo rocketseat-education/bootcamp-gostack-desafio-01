@@ -67,6 +67,8 @@ server.post('/projects', (req, res) => {
 });
 
 /**
+ * Route params: id
+ * Request body: tittle
  * Altera o titulo do projeto com o id presente nos parametros da rota.
  */
 server.put('/projects/:id', checkProjectExists, (req, res) => {
