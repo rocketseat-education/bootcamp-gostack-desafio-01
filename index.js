@@ -31,7 +31,6 @@ function checkProjectExists(req, res, next) {
  * Middleware que dá log no número de requisições
  */
 function logRequests(req, res, next) {
-  numberOfRequests++;
 
   console.count("Número de requisições");
 
