@@ -49,7 +49,7 @@ server.get('/projects', (req, res) => {
 });
 
 /**
- * Request body: id, tittle
+ * Request body: id, title
  * Cadastra um novo projeto
  */
 server.post('/projects', (req, res) => {
@@ -68,8 +68,8 @@ server.post('/projects', (req, res) => {
 
 /**
  * Route params: id
- * Request body: tittle
- * Altera o titulo do projeto com o id presente nos parametros da rota.
+ * Request body: title
+ * Altera o título do projeto com o id presente nos parâmetros da rota.
  */
 server.put('/projects/:id', checkProjectExists, (req, res) => {
   const { id } = req.params;
@@ -84,7 +84,7 @@ server.put('/projects/:id', checkProjectExists, (req, res) => {
 
 /**
  * Route params: id
- * Deleta o projeto associado ao id presente nos parametros da rota.
+ * Deleta o projeto associado ao id presente nos parâmetros da rota.
  */
 server.delete('/projects/:id', checkProjectExists, (req, res) => {
   const { id } = req.params;
