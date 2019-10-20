@@ -11,7 +11,6 @@ server.use(express.json());
  * pode receber adições ou exclusões mesmo sendo
  * uma constante.
  */
-let numberOfRequests = 0;
 const projects = [];
 
 /**
@@ -32,9 +31,8 @@ function checkProjectExists(req, res, next) {
  * Middleware que dá log no número de requisições
  */
 function logRequests(req, res, next) {
-  numberOfRequests++;
 
-  console.log(`Número de requisições: ${numberOfRequests}`);
+  console.count("Número de requisições");
 
   return next();
 }
