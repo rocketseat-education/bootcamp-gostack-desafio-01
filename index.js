@@ -5,11 +5,8 @@ const server = express();
 server.use(express.json());
 
 /**
- * Utilizamos a variável `numberOfRequests` como
- * `let` porque vai sofrer mutação. A variável
- * `projects` pode ser `const` porque um `array`
- * pode receber adições ou exclusões mesmo sendo
- * uma constante.
+ * A variável `projects` pode ser `const` porque um `array`
+ * pode receber adições ou exclusões mesmo sendo uma constante.
  */
 const projects = [];
 
@@ -40,7 +37,7 @@ function logRequests(req, res, next) {
 server.use(logRequests);
 
 /**
- * Projects
+ * Retorna todos os projetos
  */
 server.get('/projects', (req, res) => {
   return res.json(projects);
