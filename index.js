@@ -25,6 +25,19 @@ function checkProjectExists(req, res, next) {
 }
 
 /**
+* Middleware que impede criação de dois projetos com mesmo ID
+ */
+
+function checkIdInUse (req, res, next) {
+  const { id } = req.body;
+  const projectID = projects.findIndex(x => x.id == id); /* findIndex retorna -1 caso não encontre o ID buscado */
+  if (projectID != -1){
+    return res.status(409).json({error: 'ID escolhido já está em uso.'});
+  }
+  return next();
+}
+
+/**
  * Middleware que dá log no número de requisições
  */
 function logRequests(req, res, next) {
@@ -47,7 +60,7 @@ server.get('/projects', (req, res) => {
  * Request body: id, title
  * Cadastra um novo projeto
  */
-server.post('/projects', (req, res) => {
+server.post('/projects', checkIdInUse, (req, res) => {
   const { id, title } = req.body;
 
   const project = {
