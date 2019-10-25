@@ -27,14 +27,11 @@ function checkProjectExists(req, res, next) {
 /**
  * Middleware que dá log no número de requisições
  */
-function logRequests(req, res, next) {
-
-  console.count("Número de requisições");
-
+server.use((req, res, next) => {
+  console.count('Counting used routes:');
+  
   return next();
-}
-
-server.use(logRequests);
+});
 
 /**
  * Retorna todos os projetos
