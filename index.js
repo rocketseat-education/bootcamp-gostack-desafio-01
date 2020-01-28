@@ -86,8 +86,10 @@ server.delete('/projects/:id', checkProjectExists, (req, res) => {
 
   const projectIndex = projects.findIndex(p => p.id == id);
 
-  projects.splice(projectIndex, 1);
-
+  if( projectIndex !== -1 ){
+    projects.splice(projectIndex, 1);
+  }
+  
   return res.send();
 });
 
