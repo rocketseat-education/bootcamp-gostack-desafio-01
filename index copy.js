@@ -7,9 +7,6 @@ const server = express();
  */
 const projects = [];
 
-/**
- * Middleware que dá log no número de requisições
- */
 function logRequests(req, res, next) {
     console.time('Request');
     console.count('Requests')
@@ -35,10 +32,6 @@ function validateProjectID(req, res, next) {
 server.use(express.json());
 server.use(logRequests);
 
-/**
- * Request body: id, title
- * Cadastra um novo projeto
- */
 server.post('/projects', (req, res) => {
     const { id } = req.body
     const { title } = req.body;
@@ -46,10 +39,6 @@ server.post('/projects', (req, res) => {
     return res.json(projects);
 });
 
-/**
- * Route params: id;
- * Adiciona uma nova tarefa no projeto escolhido via id; 
- */
 server.post('/projects/:id/tasks', validateProjectID, (req, res) => {
     if(req.projectFound.tasks) {
         req.projectFound.tasks.push(req.body.tasks);
@@ -59,34 +48,19 @@ server.post('/projects/:id/tasks', validateProjectID, (req, res) => {
     return res.json(req.projectFound);    
 });
 
-/**
- * Retorna todos os projetos
- */
 server.get('/projects', (req, res) => {
     return res.json(projects);
 });
 
-/**
- * Retorna o projeto por ID
- */
 server.get('/projects/:id', validateProjectID, (req, res) => {
     return res.json(req.projectFound)
 });
 
-/**
- * Route params: id
- * Request body: title
- * Altera o título do projeto com o id presente nos parâmetros da rota.
- */
 server.put('/projects/:id', validateProjectID, (req, res) => {
     req.projectFound.title = req.body.title;
     return res.json(req.projectFound);
 });
 
-/**
- * Route params: id
- * Deleta o projeto associado ao id presente nos parâmetros da rota.
- */
 server.delete('/projects/:id', validateProjectID, (req, res) => {
     var projectToDelete = projects.indexOf(req.projectFound)
     projects.splice(projectToDelete, 1);
